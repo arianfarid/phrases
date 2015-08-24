@@ -50,19 +50,22 @@ function Phrases(){
         this.list = [];
         this.area = (typeof options === 'undefined') ? document : options;
         $(this.area).keypress((function(e){
-                    this.list.push(e.which);
-                    // Loop through every phrase
-                    for(var x=0; x<this.phrases.length; x++){
-                        // Loop through the 
-                        for(var i=0; i<this.phrases[x].phrase.length; i++){
-                            if(this.phrases[x].phrase.charCodeAt(i) != this.list[this.list.length - (this.phrases[x].phrase.length - i)])
-                            {
-                                // console.log("don't match");
-                                break;
-                            }
-                            if(this.phrases[x].phrase.length === (i + 1)) {
-                                // console.log('callback acheived');
-                                this.phrases[x].callback();
+                this.list.push(e.which);
+                    if(e.target.nodeName !== 'INPUT' && e.target.nodeName !== 'TEXTAREA'){
+                        // Loop through every phrase
+                        for(var x=0; x<this.phrases.length; x++){
+                            // Loop through the 
+                            for(var i=0; i<this.phrases[x].phrase.length; i++){
+                                if(this.phrases[x].phrase.charCodeAt(i) != this.list[this.list.length - (this.phrases[x].phrase.length - i)])
+                                {
+                                    // console.log("don't match");
+                                    break;
+                                }
+                            
+                                if(this.phrases[x].phrase.length === (i + 1)) {
+                                    // console.log('callback acheived');
+                                    this.phrases[x].callback();
+                                }
                             }
                         }
                     }

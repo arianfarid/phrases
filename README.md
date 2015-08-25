@@ -54,6 +54,6 @@ Add multiple phrases to the list to be checked.
 <h3>array</h3>
 An array containing arrays of names and functions.
 
-<h2>checkAllPhrases()</h2>
+<h2>.checkAllPhrases()</h2>
 Start listening for typing.
 

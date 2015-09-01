@@ -1,9 +1,8 @@
 # phrases
 A way to type defined phrases anywhere to fire off callback functions. Type anywhere except input fields to fire off a function!
 # Using
-Requre the source script in your HTML file. As of now, you'll need jquery for this to work...
+Requre the source script in your HTML file.
 ```html
-<script src="js/jquery.js"></script>
 <script src="js/phrases.js"></script>
 ```
 

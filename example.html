@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+    </head>
+    <body>
+
+        <script type="text/javascript" src="/phrases.js"></script>
+        <script type="text/javascript">
+        var ppp = new Phrases();
+        ppp
+            .addPhrase(['log', function(){console.log('I am a log')}])
+            .addPhrases([
+                ['dog', function(){console.log('I am not a dog')}],
+                ['yellow', function(){document.body.setAttribute('style', 'background-color: yellow;')}],
+                ['blue', function(){document.body.setAttribute('style', 'background-color: blue;')}],
+                ['red', function(){document.body.setAttribute('style', 'background-color: red;')}],
+                ['white', function(){document.body.setAttribute('style', 'background-color: white;')}],
+                ['orange', function(){document.body.setAttribute('style', 'background-color: orange;')}],
+                ['purple', function(){document.body.setAttribute('style', 'background-color: purple;')}],
+                ['green', function(){document.body.setAttribute('style', 'background-color: green;')}],
+                ['pink', function(){document.body.setAttribute('style', 'background-color: pink;')}],
+                ])
+            .checkAllPhrases();
+        </script>
+
+
+        <input type="text">
+    </body>
+</html>
